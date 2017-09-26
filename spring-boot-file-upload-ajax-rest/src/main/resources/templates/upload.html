@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="codefold/docs.css" />
+
+<style>
+.some-css {
+	color: red;
+	line-height: 2;
+}
+</style>
+
+<link rel="stylesheet" href="codefold/codemirror.css" />
+<link rel="stylesheet" href="codefold/foldgutter.css" />
+<script src="codefold/codemirror.js"></script>
+<script src="codefold/foldcode.js"></script>
+<script src="codefold/foldgutter.js"></script>
+<script src="codefold/brace-fold.js"></script>
+<script src="codefold/indent-fold.js"></script>
+<script src="codefold/comment-fold.js"></script>
+<script src="codefold/python.js"></script>
+
+<style type="text/css">
+.CodeMirror {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	height:100%;
+}
+</style>
+
+<script type="text/javascript">
+	function loadTextArea() {
+		var te_python = document.getElementById("code-result");
+		window.editor_python = CodeMirror.fromTextArea(te_python, {
+			mode : "python",
+			lineNumbers : true,
+			extraKeys : {
+				"Ctrl-Q" : function(cm) {
+					cm.foldCode(cm.getCursor());
+				}
+			},
+			foldGutter : true,
+			gutters : [ "CodeMirror-linenumbers", "CodeMirror-foldgutter" ]
+		});
+	}
+</script>
+</head>
+<body>
+
+
+	<form method="POST" enctype="multipart/form-data" id="fileUploadForm">
+		<input type="file" name="files" /> <input type="submit" value="Submit"
+			id="btnSubmit" />
+	</form>
+
+
+	<div style="max-width: 50em; height: 95%;">
+		<textarea id="code-result" name="code"></textarea>
+	</div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
