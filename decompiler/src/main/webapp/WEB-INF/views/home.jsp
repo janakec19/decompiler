@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Home</title>
-<link rel="stylesheet" href="<c:url value="/resources/doc.css" />" />
+<link rel="stylesheet" href="<c:url value="/resources/docs.css" />" />
 
 <style>
 .some-css {
@@ -11,9 +11,10 @@
 	line-height: 2;
 }
 </style>
-
+<link rel="stylesheet" href="<c:url value="/resources/dialog.css" />" />
 <link rel="stylesheet" href="<c:url value="/resources/codemirror.css" />" />
 <link rel="stylesheet" href="<c:url value="/resources/foldgutter.css" />"  />
+<link rel="stylesheet" href="<c:url value="/resources/matchesonscrollbar.css" />" />
 <script src="<c:url value="/resources/codemirror.js" />" ></script>
 <script src="<c:url value="/resources/foldcode.js"/>" ></script>
 <script src="<c:url value="/resources/foldgutter.js"/>" ></script>
@@ -21,6 +22,13 @@
 <script src="<c:url value="/resources/indent-fold.js"/>" ></script>
 <script src="<c:url value="/resources/comment-fold.js"/>" ></script>
 <script src="<c:url value="/resources/python.js"/>" ></script>
+<script src="<c:url value="/resources/dialog.js"/>" ></script>
+
+<script src="<c:url value="/resources/annotatescrollbar.js"/>" ></script>
+<script src="<c:url value="/resources/jump-to-line.js"/>" ></script>
+<script src="<c:url value="/resources/matchesonscrollbar.js"/>" ></script>
+<script src="<c:url value="/resources/search.js"/>" ></script>
+<script src="<c:url value="/resources/searchcursor.js"/>" ></script>
 
 <style type="text/css">
 .CodeMirror {
@@ -55,7 +63,7 @@
 	</form>
 
 
-	<div style="max-width: 50em; height: 95%;">
+	<div  height: 95%;">
 		<textarea id="code-result" name="code"></textarea>
 	</div>
 
