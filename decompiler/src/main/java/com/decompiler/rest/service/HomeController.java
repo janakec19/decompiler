@@ -27,7 +27,6 @@ public class HomeController {
 		File convFile = new File(file.getOriginalFilename());
 		try {
 			convFile.createNewFile();
-
 			FileOutputStream fos = new FileOutputStream(convFile);
 			fos.write(file.getBytes());
 			fos.close();
@@ -39,14 +38,10 @@ public class HomeController {
 
 	@RequestMapping(value = "/api/upload/multi", method = RequestMethod.POST)
 	public @ResponseBody String uploadFileMulti(@RequestParam("files") MultipartFile mfile) {
-
 		StringWriter writerstr = new StringWriter();
 		try {
-
 			File f = multipartToFile(mfile);
-
 			final PrintWriter writer = new PrintWriter(writerstr);
-
 			try {
 				com.strobel.decompiler.Decompiler.decompile(f.getAbsolutePath(),
 						new com.strobel.decompiler.PlainTextOutput(writer));

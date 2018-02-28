@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.decompiler.rest</groupId>
 	<artifactId>decompiler</artifactId>
-	<name>multipart</name>
+	<name>decompiler</name>
 	<packaging>war</packaging>
 	<version>1.0</version>
 	<properties>
