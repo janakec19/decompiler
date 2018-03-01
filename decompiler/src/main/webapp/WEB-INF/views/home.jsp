@@ -35,8 +35,9 @@
 <script src="<c:url value="/resources/matchesonscrollbar.js"/>"></script>
 <script src="<c:url value="/resources/search.js"/>"></script>
 <script src="<c:url value="/resources/searchcursor.js"/>"></script>
-
 <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style type="text/css">
 .CodeMirror {
 	border-top: 1px solid black;
@@ -75,7 +76,7 @@
 					});
 					$(this).find("button.btn-reset").click(function(){
 						element.val(null);
-						$(this).parents(".input-file").find('input').val('');
+					    $(this).parents(".input-file").find('input').val('');
 					});
 					$(this).find('input').css("cursor","pointer");
 					$(this).find('input').mousedown(function() {
@@ -89,6 +90,10 @@
 	}
 	$(function() {
 		bs_input_file();
+		$('[data-toggle="popover"]').popover();  
+		$(".btn-danger").click(function(){
+			location.reload(true);
+		});
 	});
 </script>
 </head>
@@ -172,12 +177,18 @@
 	<!-- COMPONENT END -->
 	<div class="form-group">
 		<button type="submit" id="btnSubmit" class="btn btn-primary pull-right" >Submit</button>
+		
 		<button type="reset" class="btn btn-danger">Reset</button>
+		<span style=" margin-left: 30%; color: #2d71ac;">
+		<a href="#" data-toggle="popover" style="color: #2d71ac;font-size: 16px;" title="Keys *" 
+		data-content="Ctrl-F   Searching.          Ctrl-G   Find Next.          Alt-G
+Jump to line.">Shortcut keys</a></span>
 	</div>
 </form>
 
 </div>
-
+<div>
+ </div>
 			</div><!--/container-->
 			<!-- <div class="alert alert-info fade in">
     <a href="#" class="close" data-dismiss="alert">&times;</a>
