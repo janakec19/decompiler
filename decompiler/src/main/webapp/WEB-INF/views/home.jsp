@@ -161,7 +161,7 @@
 			<div class="container">
 				<div class="col-md-8 col-md-offset-2">
    
-        <h3>Online Decompiler</h3>
+        <h3>Online Java Decompiler</h3>
 <form method="POST" action="#" enctype="multipart/form-data" id="fileUploadForm">
 	<!-- COMPONENT START -->
 	<div class="form-group">
