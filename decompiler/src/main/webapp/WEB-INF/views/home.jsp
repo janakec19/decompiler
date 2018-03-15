@@ -2,7 +2,13 @@
 <%@ page session="false"%>
 <html>
 <head>
-<title>Home</title>
+<meta name="google-site-verification" content="kuarBbduO_crZjomNPC-P1wS9ViHgRVCRoVGki7ftsk" />
+<meta name="description" content="java decompiler online - Online Java class decompiler. This online decompiler service allows you to decompile Java class files and create a class file analysis report containing the following information.">
+<meta name="keywords" content="java decompiler,java decompiler online
+,decompiler,online decompiler,java jd,java decode,exe decompiler online,jd java decompiler
+,jar decompiler online,java 8 decompiler">
+<meta name="robots" content="index,follow">
+<title>java decompiler online</title>
 <link rel="stylesheet" href="<c:url value="/resources/docs.css" />" />
 <link rel="stylesheet" href="<c:url value="/resources/bootstrap.min.css" />" />
 <link rel="stylesheet" href="<c:url value="/resources/bootstrap-theme.min.css" />" />
@@ -160,7 +166,8 @@
 		<div id="white-content">
 			<div class="container">
 				<div class="col-md-8 col-md-offset-2">
-   
+ <!--   <a href="https://freesitemapgenerator.com/">
+   Free xml sitemap generator</a>  -->
         <h3>Online Java Decompiler</h3>
 <form method="POST" action="#" enctype="multipart/form-data" id="fileUploadForm">
 	<!-- COMPONENT START -->
